@@ -1,0 +1,24 @@
+name: GCP-CICD
+
+
+on:
+  push:
+    branches: [ master]
+  pull_request:
+    branches: [ master]
+  
+
+jobs:
+  namd: Connect_GCP_Service_Account
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+
+
+      - name: GCP Github Action
+        uses: google-github-actions/setup-gcloud@master
+        with:
+            service_account_key: ${{ secrets.GCP_SA_KEY }}
+            project_id: ${{ secrets.GCP_PROJECT_ID }}
