@@ -3,13 +3,13 @@ name: GCP-CICD
 
 on:
   push:
-    branches: [ master]
+    branches: [ main ]
   pull_request:
-    branches: [ master]
+    branches: [ main ]
   
 
 jobs:
-  namd: Connect_GCP_Service_Account
+  Connect_GCP_Service_Account:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
