@@ -10,14 +10,12 @@ jobs:
   TSET_001:
     runs-on: ubuntu-latest
     steps:
-#      - name: Checkout
-#        uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2        
+        
       - name: WHOAMI
         run: whoami
-        
-      - name: ls -la
-        run: ls -la
-        
+            
       - name: mkdir RAPA
         run: mkdir RAPA
         
