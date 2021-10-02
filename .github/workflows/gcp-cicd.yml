@@ -1,0 +1,23 @@
+name: GCP-CICD
+
+
+on:
+  push:
+    branches: [ main ]
+
+
+jobs:
+  TSET_001:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2        
+        
+      - name: WHOAMI
+        run: whoami
+            
+      - name: mkdir RAPA
+        run: mkdir RAPA
+        
+      - name: ls -la
+        run: ls -la
