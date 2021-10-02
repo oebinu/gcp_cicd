@@ -29,3 +29,7 @@ jobs:
         with:
           name: WAR_With_Gradle
           path: ./build/libs/*.war
+
+      - uses: actions/download-artifact@v2
+        with:
+          name: WAR_With_Gradle
